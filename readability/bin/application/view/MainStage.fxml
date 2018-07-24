@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="MainWindow" fx:id="mainStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="2.0" prefHeight="41.0" prefWidth="600.0">
+         <children>
+            <CheckBox fx:id="poemCheck" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" text="诗歌" />
+            <CheckBox fx:id="oldCheck" layoutX="83.0" layoutY="12.0" mnemonicParsing="false" text="文言文" />
+            <Text fx:id="countText" fill="#070707" layoutX="470.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:              " wrappingWidth="89.99998950958252" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="40.00001049041748" AnchorPane.topAnchor="12.0" />
+            <Pane layoutX="168.0" layoutY="8.0" minHeight="20.0" minWidth="30.0" prefHeight="25.0" prefWidth="198.0" AnchorPane.topAnchor="8.0" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="inputArea" layoutX="9.0" layoutY="42.0" minHeight="100.0" minWidth="300.0" prefHeight="263.0" prefWidth="590.0" promptText="请输入文章......诗歌或文言文请在上方对应处打勾~" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="42.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <AnchorPane fx:id="bottom" layoutX="136.0" layoutY="314.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="600.0" style="-fx-background-color: #494949;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fx:id="text1" fill="WHITE" layoutX="117.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                                                        " AnchorPane.leftAnchor="117.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="text2" fill="WHITE" layoutX="117.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                                                        " AnchorPane.leftAnchor="117.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="resultArea" editable="false" layoutX="353.0" layoutY="43.0" minWidth="30.0" opacity="0.0" prefHeight="16.0" prefWidth="227.0" style="-fx-background-color: #494949;" AnchorPane.bottomAnchor="6.5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="readButton" layoutX="382.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleReadability" prefHeight="27.0" prefWidth="90.0" text="阅读指数" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="128.0" />
+            <Button fx:id="classifyButton" layoutX="496.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleClassify" prefHeight="27.0" prefWidth="90.0" text="生字分级" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="clearButton" layoutX="382.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="27.0" prefWidth="90.0" text="清空文本" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="128.0" />
+            <Button fx:id="moreInfo" layoutX="496.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleMoreInfo" prefHeight="27.0" prefWidth="90.0" text="信息说明" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="14.0" />
+            <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.36687469482422" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@../../../database/pic/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets left="50.0" right="50.0" />
+   </opaqueInsets>
+</AnchorPane>

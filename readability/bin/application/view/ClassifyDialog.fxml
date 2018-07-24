@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="page" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="resultArea" prefHeight="280.0" prefWidth="200.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
+      <AnchorPane fx:id="pageDown" layoutX="38.0" layoutY="292.0" prefHeight="108.0" prefWidth="586.0" style="-fx-background-color: #494949;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="292.0">
+         <children>
+            <Text fx:id="text" fill="WHITE" layoutX="161.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="数据基于人教版中小学教材，结果仅供参考" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="button" graphicTextGap="8.0" layoutX="499.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="25.0" prefWidth="65.0" text=" 返回 " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
